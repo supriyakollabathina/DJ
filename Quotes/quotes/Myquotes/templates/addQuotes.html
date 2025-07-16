@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%block addQuotesactive%}active{%endblock addQuotesactive%}
+
+{%block body%}
+<div class="container-fluid align-items-center py-3  ">
+    <h1 >Your Contribution....</h1>
+    <form action="/addQuotes" method="post">
+    <div class=" align-items-center  mb-3">
+  
+  <input class="form-control" type="file" id="formFile">
+</div>
+</div>
+<button type="button" class="btn btn-primary align-items-center">Submit</button>
+</form>
+
+{%endblock body%}
