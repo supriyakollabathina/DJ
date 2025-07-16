@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{%block blogactive%}active{%endblock blogactive%}
+{%block title%}Blog{%endblock title%}
+{%block body%}
+<div class="container mt-5 ">
+<h1 class="text-center pt-4">Welcome to mountain coders blog</h1>
+{% for b in blogs %}
+<div class="media mx-3 mt-2">
+    <div class="media-body ">
+<h3 class="mt-0" ><a href="/blogpost/{{b.slug}}" class="text-dark">{{b.title}}</a></h3>
+<div class=" my-2">
+{{b.content|striptags|slice:250}}....
+</div>
+</div>
+<a href="/blogpost/{{b.slug}}" class="text-dark"><button class="btn btn-primary my-2">Read More..</button>
+</div>
+{% endfor %}
+</div>
+{%endblock body%}

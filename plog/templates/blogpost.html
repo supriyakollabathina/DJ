@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{%block title%}Blogpost{%endblock title%}
+{%block body%}
+
+<div class="container">
+    <h3 class="my-3 text-primary">{{blog.title}}</h3>
+    <div class="my-3">
+        {{blog.content|safe}}
+    </div>
+
+</div>
+
+
+
+{%endblock body%}
